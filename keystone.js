@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'SF_Node_1_2',
-	'brand': 'SF_Node_1_2',
+	'name': 'SF_Node_1_3',
+	'brand': 'SF_Node_1_3',
 
 	'sass': 'public',
 	'static': 'public',
@@ -61,10 +61,6 @@ keystone.set('nav', {
 
 // Start Keystone to connect to your database and initialise the web server
 
-if (keystone.get('env') == 'production'){
-    keystone.set('cloudinary config', process.env.CLOUDINARY_URL);
-    keystone.set('cookie secret', process.env.COOKIE_SECRET);
-    keystone.set('mandrill api key', process.env.MANDRILL_API_KEY);
-}
+
 
 keystone.start();
